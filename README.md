@@ -34,10 +34,10 @@ reducer.on(":update", state => {
   console.log(state):
 });
 
-queue.update(({count}) => ({count: count + 1}))
+reducer.update(({count}) => ({count: count + 1}))
 // => logging {count: 1}
-queue.update(({count}) => Promise.resolve({count: count + 1}))
-queue.update(({count}) => Promise.resolve({count: count + 1}))
+reducer.update(({count}) => Promise.resolve({count: count + 1}))
+reducer.update(({count}) => Promise.resolve({count: count + 1}))
 // => logging {count: 3} not 2: queuing promises are reduced to one result.
 ```
 
