@@ -1,10 +1,10 @@
 {
   "name": "promised-reducer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Fold promise queue and tell detect sync or async",
   "main": "index.js",
   "scripts": {
-    "prepublish": "$(npm bin)/babel -o index.js index.es",
+    "prepublish": "babel -o index.js index.es",
     "test": "babel-node test.js"
   },
   "author": "mizchi",
