@@ -1,11 +1,11 @@
-import PromiseQueueFolder from "./index";
+import PromisedReducer from "./index.es";
 const {ok, equal} = require("assert");
 
 // helper
 function wait(ms = 100) {return new Promise(done => setTimeout(done, ms));}
 
 (async () => {
-  var app = new PromiseQueueFolder({count: 0}, [])
+  var app = new PromisedReducer({count: 0}, [])
   // case 1
   app.update(s => ({count: 1}));
   ok(!app.updating);

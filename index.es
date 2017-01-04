@@ -30,7 +30,7 @@ export default class PromisedReducer extends EventEmitter {
     this.emit(":update", this.state);
 
     if (inAsync) {
-      this.emit(":end-anync-updating");
+      this.emit(":end-async-updating");
     }
     return Promise.resolve();
   }
